@@ -7,13 +7,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create 
-    # byebug
     user = User.create(user_params)
 
     if user.valid?
-      render json: { user: UserSerializer.new(user) }, status: :created
+      render json: { user: UserSerializer.new(user), success: "Welcome to HmShop #{user.first_name} #{user.last_name}!" }, status: :created
     else
-      render json: { message: user.errors.full_messages }, status: :bad_request
+      render json: { header: "Check the error(s) bellow:" , error: user.errors.full_messages,  }, status: :bad_request
     end
   end
 
