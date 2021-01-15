@@ -1,14 +1,17 @@
 class ApplicationController < ActionController::API
+  before_action :authenticate
 
   def encode_token(payload)
-    JWT.encode(payload, Rails.application.secrets.secret_keybase, 'HS256')
+    # Rails.application.secrets.secret_keybase
+    JWT.encode(payload, Rails.application.secrets.secret_key_base, 'HS256')
   end
 
   def decode_token(token)
-    JWT.decode(token, Rails.application.secretes.secret_keybase, true, { algorithm: 'HS256' })[0]
+    JWT.decode(token, Rails.application.secrets.secret_key_base, true, { algorithm: 'HS256' })[0]
   end
 
   def authenticate
+    # byebug
     # JWT will throw an error if decoding doesn't succeed
     # We need to handle the error so the app doesn't crash
 
