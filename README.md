@@ -31,7 +31,7 @@ Products and search page
 Inventory - Add new product feature
 ![Preview-6](https://res.cloudinary.com/dloh9txdc/image/upload/v1610680028/General%20Projects/Screen_Shot_2021-01-14_at_10.03.10_PM_hxncjm.png)
 
-Loggedin seller's options
+Logged in user/seller features - delete, edit, increase and decrease quantity of items
 ![Preview-7](https://res.cloudinary.com/dloh9txdc/image/upload/v1610680029/General%20Projects/Screen_Shot_2021-01-14_at_10.03.21_PM_tguweb.png)
 
 <br />
