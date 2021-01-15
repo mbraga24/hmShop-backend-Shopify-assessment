@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
       resources :orders
       
-      resources :products
+      resources :products, only: [:create, :index]
       
       resources :users, only: [:index]
       post '/signup', to: 'users#create'
