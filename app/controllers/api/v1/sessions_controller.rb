@@ -1,11 +1,12 @@
 class Api::V1::SessionsController < ApplicationController
   wrap_parameters :user, include: [:email, :password] 
+  before_action :authenticate, only: [:autologin]
 
   def login
     user = User.find_by(email: user_credentials_params[:email])
 
     if user && user.authenticate(user_credentials_params[:password])
-      token = JWT.encode({ user_id: user.id }, 'a_big_secret', 'HS256')
+      token = encode_token({ user_id: user.id })
       render json: { user: UserSerializer.new(user), token: token, success: "Welcome back, #{user.first_name}!" }, status: :accepted
     else
       render json: { error: user.error.full_messages, header: "Invalid email or password" }, status: :unauthorized
@@ -13,13 +14,17 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def autologin
-    auth_header = request.headers['Authorization']
+    # render json: { user: UserSerializer.new(@current_user) }, status: :ok
 
+    # STEP 1
+    auth_header = request.headers['Authorization']
     token = auth_header.split(" ")[1]
 
-    decoded_token = JWT.decode(token, 'a_big_secret', true, { algorithm: 'HS256' })
+    # STEP 2
+    decoded_token = JWT.decode(token, 'a_big_secret', true, { algorithm: 'HS256' })[0]
 
-    user_id = decoded_token[0]["user_id"]
+    # STEP 3
+    user_id = decoded_token["user_id"]
 
     user = User.find_by(id: user_id)
 
