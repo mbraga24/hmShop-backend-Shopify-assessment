@@ -1,6 +1,6 @@
 class Api::V1::SessionsController < ApplicationController
+  skip_before_action :authenticate, only: [:login]
   wrap_parameters :user, include: [:email, :password] 
-  before_action :authenticate, only: [:autologin]
 
   def login
     user = User.find_by(email: user_credentials_params[:email])
@@ -14,25 +14,7 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def autologin
-    # render json: { user: UserSerializer.new(@current_user) }, status: :ok
-
-    # STEP 1
-    auth_header = request.headers['Authorization']
-    token = auth_header.split(" ")[1]
-
-    # STEP 2
-    decoded_token = JWT.decode(token, 'a_big_secret', true, { algorithm: 'HS256' })[0]
-
-    # STEP 3
-    user_id = decoded_token["user_id"]
-
-    user = User.find_by(id: user_id)
-
-    if user 
-      render json: { user: UserSerializer.new(user) }, status: :ok
-    else
-      render json: { header: "You are not logged in." }
-    end
+    render json: { user: UserSerializer.new(@current_user) }, status: :ok
   end
 
   private 
