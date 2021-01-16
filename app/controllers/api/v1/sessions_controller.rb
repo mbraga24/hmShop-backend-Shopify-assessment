@@ -1,7 +1,8 @@
 class Api::V1::SessionsController < ApplicationController
-  skip_before_action :authenticate, only: [:login]
   wrap_parameters :user, include: [:email, :password] 
-
+  skip_before_action :authenticate, only: [:login]
+  # before_action :authenticate, only: [:autologin]
+  
   def login
     user = User.find_by(email: user_credentials_params[:email])
 
@@ -9,7 +10,7 @@ class Api::V1::SessionsController < ApplicationController
       token = encode_token({ user_id: user.id })
       render json: { user: UserSerializer.new(user), token: token, success: "Welcome back, #{user.first_name}!" }, status: :accepted
     else
-      render json: { error: user.error.full_messages, header: "Invalid email or password" }, status: :unauthorized
+      render json: { header: "Invalid email or password", error: [] }, status: :unauthorized
     end
   end
 
