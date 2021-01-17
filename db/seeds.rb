@@ -58,7 +58,17 @@ product_6 = Product.create(
   user: jacquelyn
 )
 
-puts "Users Created: #{User.all.count} | Products Created: #{Product.all.count}"
+order_1 = Order.create(
+  product: product_6, 
+  user: clark
+)
+
+order_2 = Order.create(
+  product: product_1, 
+  user: jacquelyn
+)
+
+puts "Users Created: #{User.all.count} | Products Created: #{Product.all.count} | Orders Created: #{Order.all.count}"
 puts "======================="
 puts "      DATA SEEDED"
 puts "======================="
