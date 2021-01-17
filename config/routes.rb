@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
       resources :orders
       
-      resources :products, only: [:create, :index]
+      resources :products, only: [:create, :index, :show]
+      get '/products_by', to: "products#filter_products"
       
       resources :users, only: [:index]
       post '/signup', to: 'users#create'

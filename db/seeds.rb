@@ -51,6 +51,13 @@ product_5 = Product.create(
   user: jacquelyn
 )
 
+product_6 = Product.create(
+  name: "Jordan Shoes - Semi new",
+  price: "99.99",
+  image_url: "https://di2ponv0v5otw.cloudfront.net/posts/2020/09/13/5f5ed24abcbb52dc282adab0/m_5f5fdb7ae131646464ec685f.jpg",
+  user: jacquelyn
+)
+
 puts "Users Created: #{User.all.count} | Products Created: #{Product.all.count}"
 puts "======================="
 puts "      DATA SEEDED"
