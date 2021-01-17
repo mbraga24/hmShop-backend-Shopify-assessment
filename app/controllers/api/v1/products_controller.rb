@@ -15,7 +15,7 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def filter_products
-    products = Product.where("lower(#{params[:type]}) like lower(?)", "%#{params[:name]}%")
+    products = Product.where("lower(#{params[:type]}) like lower(?)", "%#{params[:query]}%")
     render json: products
   end
 
