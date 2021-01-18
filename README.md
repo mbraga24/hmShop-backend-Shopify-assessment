@@ -2,11 +2,7 @@
 
 ## Hello team Shopify :wave:
 
-__There was a lot I wish I could've done with this project but unfortunately I ran out of time. I achieved some of the requirements for the assessment and given an opportunity I would love to ask a few questions and discuss about some of the feature ideas suggested. It was really exciting working on this assessment, I definitely felt pushed to learn a lot.__ :smile:
-
-<br />
-
-:running_man::dash: ___I gotta go now and get going so I can show the team what I can do...___ :coffee::technologist:
+__There was a lot I wish I could've done with this project but unfortunately I ran out of time. I achieved some of the requirements for the assessment and given an opportunity I would love to ask a few questions and discuss about some of the feature ideas suggested. It was really exciting working on this assessment, I definitely felt pushed to learn a lot.__ :smile::coffee::technologist:
 
 <br />
 
