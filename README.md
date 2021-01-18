@@ -85,7 +85,7 @@ Storing product images in Cloudinary <br />
 
 ## Installation
 
-#### [SiriuS - Backend](https://github.com/mrdbrg/SiriuS-backend)
+#### [SiriuS - Backend](https://github.com/mrdbrg/hmShop-backend-Shopify-assessment)
 
 1. Fork this pository.
 1. Clone this repository onto your local machine.
@@ -93,7 +93,7 @@ Storing product images in Cloudinary <br />
 1. Run `bundle install` to download all the necessary gems.
 1. Run `rails db:migrate` to create the database.
 1. Run `rails db:seed` to seed the database with some auto-generated data.
-1. Follow the instructions for the [front-end portion](https://github.com/mrdbrg/Shopify-frontend) of this application. 
+1. Follow the instructions for the [front-end portion](https://github.com/mrdbrg/hmShop-frontend-Shopify-assessment) of this application. 
 1. Run `rails s` to start the app.
 
 [Back To The Top](#hmsHop)
