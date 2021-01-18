@@ -43,14 +43,17 @@ Inventory
 Add new items to inventory
 ![Preview-10](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.20.36_AM_uosrxj.png)
 
+New items added to inventory
+![Preview-11](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.19.57_AM_cgoprs.png)
+
 Shopping Cart - Total order amount
-![Preview-11](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.22.00_AM_hwwb0h.png)
+![Preview-12](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.22.00_AM_hwwb0h.png)
 
 Completing order - __I'm just mimicking order completion. I'm not handling money__
-![Preview-12](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.22.10_AM_yevlcw.png)
+![Preview-13](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.22.10_AM_yevlcw.png)
 
-Storing product images in Cloudinary
-![Preview-13](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.23.29_AM_tlfqxn.png)
+Storing product images in Cloudinary <br />
+![Preview-14](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.23.29_AM_tlfqxn.png)
 
 <br />
 
