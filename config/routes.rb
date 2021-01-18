@@ -5,10 +5,11 @@ Rails.application.routes.draw do
       post '/login', to: 'sessions#login'
       get '/autologin', to: 'sessions#autologin'
 
-      resources :orders
+      resources :orders, only: [:create, :destroy]
       get '/user-orders', to: 'orders#user_orders'
+      post '/place-order', to: 'orders#place_order'
       
-      resources :products, only: [:create, :index, :show, :destroy]
+      resources :products, only: [:create, :update, :index, :show, :destroy]
       get '/products_by', to: 'products#filter_products'
       
       resources :users, only: [:index]

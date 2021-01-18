@@ -1,10 +1,14 @@
 class Api::V1::ProductsController < ApplicationController
   skip_before_action :authenticate, only: [:index, :show, :filter_products]
-  # before_action :authenticate, only: [:create]
   
   def index 
     products = Product.all
     render json: products
+    # render json: {
+    #   orders: products.map { |product|
+    #     OrderSerializer.new(product).attributes
+    #   }
+    # }
   end
 
   def show
@@ -18,14 +22,25 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def create
-    image = Cloudinary::Uploader.upload(product_params[:file])
     product = Product.create(
-      name: product_params[:name], 
-      price: product_params[:price], 
-      image_url: image["url"], 
+      name: params[:name], 
+      price: params[:price], 
+      quantity: params[:quantity].to_i,
       user: @current_user
     )
-      render json: { product: ProductSerializer.new(product) }, status: :created
+      
+      if product.valid?  
+        image = Cloudinary::Uploader.upload(params[:file])
+        product[:image_url] = image["url"]
+        product.save
+        render json: { product: ProductSerializer.new(product) }, status: :created
+      else 
+        render json: { product: ProductSerializer.new(product) }, status: :bad_request
+      end
+  end
+
+  def update
+    byebug
   end
 
   def destroy 
@@ -34,12 +49,5 @@ class Api::V1::ProductsController < ApplicationController
       product.destroy
       render json: { product: ProductSerializer.new(product), confirmation: "Product deleted successfully!" }, status: :accepted
     end
-  end
-
-
-  private 
-
-  def product_params
-    params.require(:product).permit(:name, :price, :file)
   end
 end
