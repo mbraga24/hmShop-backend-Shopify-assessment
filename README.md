@@ -1,9 +1,8 @@
+# hmSHop
+
 # Hello team Shopify :wave:
 
-__I'm still working on this project and I should be done before January 17th with all the basic requirements for the backend.__ :smile:
-
-However I wanna welcome you to clone and run this application. There is still a lot to do but I'm very proud with what I've accomplished so far. 
-This server side will connect with this [frontend](https://github.com/mrdbrg/Shopify-frontend).
+__There was a lot I wish I could've done with this project but unfortunately I ran out of time. I achieved some of the requirements for the assessment and given an opportunity I would love to ask a few questions and discuss about some of the feature ideas suggested. It was really exciting working on this assessment, I definitely felt pushed to learn a lot.__ :smile:
 
 <br />
 
@@ -56,7 +55,7 @@ Storing product images in Cloudinary <br />
 ![Preview-14](https://res.cloudinary.com/dloh9txdc/image/upload/v1610947481/General%20Projects/Screen_Shot_2021-01-18_at_12.23.29_AM_tlfqxn.png)
 
 <br />
-
+[Back To The Top](#hmsHop)
 ---
 
 ### Table of Contents
@@ -84,7 +83,7 @@ Storing product images in Cloudinary <br />
 - [bcrypt-ruby](https://github.com/codahale/bcrypt-ruby)
 - [rack-cors](https://github.com/cyu/rack-cors)
 
-[Back To The Top](#sirius)
+[Back To The Top](#hmsHop)
 
 ---
 
@@ -98,10 +97,10 @@ Storing product images in Cloudinary <br />
 1. Run `bundle install` to download all the necessary gems.
 1. Run `rails db:migrate` to create the database.
 1. Run `rails db:seed` to seed the database with some auto-generated data.
-1. Follow the instructions for the [front-end portion](https://github.com/mrdbrg/SiriuS-frontend) of this application. 
+1. Follow the instructions for the [front-end portion](https://github.com/mrdbrg/Shopify-frontend) of this application. 
 1. Run `rails s` to start the app.
 
-[Back To The Top](#sirius)
+[Back To The Top](#hmsHop)
 
 ---
 
@@ -117,7 +116,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
-[Back To The Top](#sirius)
+[Back To The Top](#hmsHop)
 
 ---
 
@@ -126,4 +125,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - LinkedIn - [Marlon Braga](https://www.linkedin.com/in/marlon-braga/)
 - Portfolio - [Currently unavailable and under construction](https://www.youtube.com/watch?v=oHg5SJYRHA0&ab_channel=cotter548)
 
-[Back To The Top](#sirius)
+[Back To The Top](#hmsHop)
